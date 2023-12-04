@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="./mp-screensitter.js"></script>
+</head>
+<body>
+
+<h1>Example</h1>
+<div class="sit_here">First sitter seat 1</div>
+<div class="sit_here">First sitter seat 2</div>
+<div class="sit_here">First sitter seat 2</div>
+<div>Not a chair :)</div>
+<div class="seat">Second sitter seat</div>
+
+<script>
+    window.onload = () => {
+        new MpScreensitter(
+            {
+                seat_class: 'sit_here',
+                sitter_class: 'sitter',
+                sitter_images: [
+                    './sitter.gif',
+                    './sitter2.gif',
+                ],
+                sitter_offset_x: 10,
+                sitter_offset_y: 14,
+            }
+        );
+
+        new MpScreensitter(
+            {
+                sitter_images: [
+                    './sitter3.gif',
+                ],
+                sitter_offset_x: 30,
+                sitter_offset_y: 14,
+            }
+        );
+    };
+</script>
+
+<style>
+    div {
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        line-height: 100px;
+        margin: 10px;
+        font-size: 10px;
+        text-align: center;
+        border: 1px solid black;
+    }
+    .seat {
+        background: #facade;
+    }
+    .sit_here {
+        background: #bedead;
+    }
+</style>
+
+</body>
+</html>
