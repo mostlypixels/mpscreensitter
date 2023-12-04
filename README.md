@@ -8,7 +8,7 @@ Howto: include the script and use the following snippet to create a sitter.
 
 ````
 <script>
-    window.onload = () => {
+    window.addEventListener("load",function(event) {
         new MpScreensitter(
             {
                 seat_class: 'sit_here', // The class of the elements to target (default: "seat")
@@ -22,7 +22,8 @@ Howto: include the script and use the following snippet to create a sitter.
                 sitter_offset_x: 10, // Distance from the right side of the box in pixels
                 sitter_offset_y: 14, // Vertical offset in pixels. The "legs'" size.
             }
-        );
+      
+    },false);
 </script>
 ````
 
