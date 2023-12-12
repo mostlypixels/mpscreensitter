@@ -31,13 +31,13 @@ class MpScreensitter {
                 if (seat !== null) {
                     self.moveScreenSitter(seat);
                 }
-            });
+            }, {passive: true});
             element.addEventListener('mouseenter', function (event) {
                 self.moveScreenSitter(event.target);
-            });
+            }, {passive: true});
             element.addEventListener('mouseleave', function (event) {
                 self.hideScreenSitter();
-            });
+            }, {passive: true});
         });
     }
 
